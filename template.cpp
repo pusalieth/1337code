@@ -3,6 +3,21 @@
 
 using namespace std;
 
+void reverseWords(string &s) {
+    string temp;
+    int length = 0;
+    for(int i = s.size(); i >= 0 ; i--) {
+        if(s[i] == ' ') {
+            for(int a = i; a < length; a++) {
+                temp += s[i];
+            }
+        } else {
+           length++;
+        }
+    }
+    s = temp;
+}
+
 int main() {
     int arrayLength = 10;
 	vector<int> nums;
