@@ -4,35 +4,21 @@
 using namespace std;
 
 uint32_t rangeBitwiseAnd(uint32_t m, uint32_t n) {
-    uint32_t lsb = 1;
-    uint32_t temp = 0;
+  uint32_t temp = m;
+  uint32_t lsb = 1;
+  while (temp > 0) {
+    temp >>= 1;
+    lsb <<= 1;
+  }
+  if (n > lsb)
+    return 0;
 
-    temp = m;
-    while(temp > 0) {
-        temp >>= 1;
-        lsb <<= 1;
-    }
-    cout << lsb << endl;
+  uint32_t ans;
+  for (ans = m++; m <= n && ans; m++) {
+    ans &= m;
+  }
 
-    if (n > lsb) {
-        return 0;
-    }
-
-    uint32_t ans = m;
-    m++;
-
-    while(m<=n) {
-        ans &= m;
-        cout << m << endl;
-        if (ans == 0) {
-            return 0;
-        }
-        m++;
-    }
-
-    return ans;
+  return ans;
 }
 
-int main() {
-    cout << rangeBitwiseAnd(2147483646,2147483647) << endl;
-}
+int main() { cout << rangeBitwiseAnd(2147483646, 2147483647) << endl; }
