@@ -10,54 +10,25 @@ int myAtoi(string str) {
     string new_str = "";
 
     // if str is empty return 0
-    if(str == "" || str == "+" || str == "-") {
+    if(str == "") {
         return 0;
     }
+    
 
-    // if str is negative skip symbol and keep number
-    bool neg = false;
-    if(str[0] == 45) {
-        neg = true;
-        for(int i = 1; i < str.size(); i++) {
-            if(str[i] > 57 || str[i] < 48) {}
-            else {
-                new_str += str[i];
-            }
+    int breaks = 0;
+    int max_length = 0;
+    for(int i = str.size(); i >= 0; i--) {
+        if(str[i] == '+' || str[i] == '-') {
+            breaks++;
         }
-    }
-    // else str is positive or no numbers
-    else {
-        for(int i = 0; i < str.size(); i++) {
-            if(str[i] > 57 || str[i] < 48) {}
-            else {
-                new_str += str[i];
-            }
-        }
+        max_length++;
     }
 
-    cout << new_str << "    " << new_str.size() << endl;
-
-    // format str to int
-    for(int i = 0; i < new_str.size(); i++) {
-        int compound = new_str.size()-(i+1);
-        int temp = new_str[i]-48;
-        cout << "str[i]: " << new_str[i] << " i: " << i << " compound: " << compound << " temp: " << temp << endl;
-        atoi += pow(10,compound)*temp;
-        cout << atoi << endl;
-    }
-
-    if(neg) {
-        atoi *= -1;
-    }
-
-    return atoi;
+    int nums[max_length][breaks];
 }
 
 int main() {
     string str = "+-2";
-    int result = 0;
 
-    result = myAtoi(str);
-
-    cout << result << endl;
+    cout << myAtoi(str) << endl;
 }
