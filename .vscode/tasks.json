@@ -12,15 +12,25 @@
   },
   "tasks": [
     {
-      "label": "compile for 1337code",
+      "label": "compile->run",
       "type": "shell",
       "command": "g++",
-      "args": ["${file}", "-o", "1337code", "&", "1337code.exe"],
+      "args": [
+        "${file}",
+        "-o",
+        "1337code",
+        "&",
+        "1337code.exe"
+      ],
       "promptOnClose": true,
       "problemMatcher": [],
       "presentation": {
         "reveal": "always",
         "panel": "new"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
       }
     }
   ]

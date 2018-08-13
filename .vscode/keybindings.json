@@ -1,5 +1,0 @@
-{
-  "key": "ctrl+f9",
-  "command": "workbench.action.tasks.runTask",
-  "args": "compile for 1337code"
-}
