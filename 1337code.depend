@@ -1,0 +1,40 @@
+# depslib dependency file v1.0
+1443522331 source:/home/jake/1337code/Number_of_Bits.cpp
+	<iostream>
+	<stdint.h>
+
+1443676385 source:/home/jake/1337code/Ugly_Number(unsolved).cpp
+	<iostream>
+	<stdint.h>
+
+1443752627 source:c:\users\data\desktop\1337code\valid_number.cpp
+	<iostream>
+	<string>
+
+1467968157 source:c:\users\data\desktop\1337code\count_bits.cpp
+	<iostream>
+	<vector>
+
+1467971912 source:c:\users\data\desktop\1337code\sum_of_two_integers.cpp
+	<iostream>
+	<vector>
+
+1468047202 source:c:\users\data\desktop\1337code\sum_of_two_integers(unsolved).cpp
+	<iostream>
+	<vector>
+
+1468051436 source:c:\users\data\desktop\1337code\single_number-iii.cpp
+	<iostream>
+	<vector>
+
+1468109643 source:c:\users\data\desktop\1337code\string_to_int_atoi.cpp
+	<iostream>
+	<vector>
+	<string>
+	<cmath>
+
+1487971490 source:c:\users\data\desktop\1337code\reverse_words.cpp
+	<iostream>
+	<vector>
+	<string>
+
